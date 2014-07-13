@@ -64,13 +64,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/twitter/tweet_tokenizer/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="1" selection-start="807" selection-end="807" vertical-scroll-proportion="0.63993174" vertical-offset="0" max-vertical-offset="586">
+            <state line="25" column="1" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
               <folding>
                 <element signature="e#37#67#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="64" selection-start="153" selection-end="153" vertical-scroll-proportion="0.080213904" vertical-offset="0" max-vertical-offset="561">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -94,6 +103,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/main/scala/com/twitter/tweet_tokenizer/Main.scala" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -451,10 +461,17 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/twitter/tweet_tokenizer/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="1" selection-start="807" selection-end="807" vertical-scroll-proportion="0.63993174" vertical-offset="0" max-vertical-offset="586">
+        <state line="25" column="1" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
           <folding>
             <element signature="e#37#67#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="64" selection-start="153" selection-end="153" vertical-scroll-proportion="0.080213904" vertical-offset="0" max-vertical-offset="561">
+          <folding />
         </state>
       </provider>
     </entry>
