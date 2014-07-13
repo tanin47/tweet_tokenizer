@@ -1,26 +1,65 @@
 package com.twitter.tweet_tokenizer
 
 import java.text.BreakIterator
+import com.twitter.java.text.RuleBasedBreakIterator
+import scala.collection.mutable
 import java.util.Locale
 
 object Main {
   def main(args: Array[String]) {
-    println("Hello")
+    val texts = Seq(
+      "ประเทศไทยมีบริการเทเลเท็กซ์โดยไม่คิดมูลค่าทางช่อง 5 มานานกว่า 4 ปีแล้ว",
+      "อิพี่ลู่ชอบให้ความสำคัญพี่หมินอ่ะ ทั้งสายตาทั้งการกระทำ มองทีละมุนไปถึงซีลีบรัมซ้าย สุดท้ายก็เกลียดอิพี่ไม่ลง",
+      "ตอนเป็นเด็กเธอคงยิ้มได้ทันทีน้ำตาหยุดไหล พอวันเวลามันเลือนผ่านพรากเอารอยยิ้มของเธอนั้นให้หายไปพร้อมกับหัวใจด้านชา",
+      "จองจูยอน นางเอกของอูบินในเรื่อง Twenty เรื่องนี้รอดูเป็นพิเศษ บอกเลย อิอิ",
+      "ยางมัดผมห่อนี้ 30 บาท คือแพงแล้วนะสำหรับสำเพ็ง ถ้าเป็นชลบุรีหรอ สีละ 20 อ่ะ แพงจุง"
+    )
 
-    val boundary = BreakIterator.getWordInstance(Locale.forLanguageTag("th"))
+    texts.foreach { text =>
+      println("JDK:      " + jdk(text).mkString("|"))
+      println("Improved: " + improved(text).mkString("|"))
+    }
+  }
 
-//    val source = "สงสัย บิ๊กตู่ ดูผลดุสิตโพลล์ ก็คงไม่พอใจอีก เพราะตั้งเป้าให้ได้คะแนนเต็ม100....แต่โพลล์ นี้ สำรวจน้อยแค่ราว1,400คนเท่านั้น น่าถามสักหมื่นคน"
-    val source = "เมื่อ 00.08 น.เกิดเหตุเพลิงไหม้โกดังเก็บดอกไม้พลาสติก ถ.แสงชูโต ต.ท่าผา อ.บ้านโป่ง จ.ราชบุรี เสียหาย 1 โกดัง ...ล่าสุดเพลิงสงบ ไม่มีคนเจ็บ"
-    boundary.setText(source)
-    var start = boundary.first
-    var end = boundary.next
+  val jdkBoundary = BreakIterator.getWordInstance(Locale.forLanguageTag("th"))
+
+  def jdk(text: String): Seq[String] = {
+    jdkBoundary.setText(text)
+
+    var start = jdkBoundary.first
+    var end = jdkBoundary.next
+
+    val buffer = mutable.ListBuffer[String]()
 
     while (end != BreakIterator.DONE) {
-      print(source.substring(start,end) + "|")
+      buffer.append(text.substring(start, end))
+
       start = end
-      end = boundary.next
+      end = jdkBoundary.next
     }
 
-    println()
+    buffer.toSeq
+  }
+
+  val improvedTokenizer = new ThaiTokenizer(new ThaiDict("/thai_dict.txt"))
+  val improvedBoundary = new RuleBasedBreakIterator("WordBreakIteratorData_th")
+
+  def improved(text: String): Seq[String] = {
+    improvedBoundary.setText(text)
+
+    var start = improvedBoundary.first
+    var end = improvedBoundary.next
+
+    val buffer = mutable.ListBuffer[String]()
+
+    while (end != BreakIterator.DONE) {
+      val s = text.substring(start, end)
+      buffer.appendAll(improvedTokenizer.break(s))
+
+      start = end
+      end = improvedBoundary.next
+    }
+
+    buffer.toSeq
   }
 }
