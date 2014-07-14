@@ -67,7 +67,7 @@
       <file leaf-file-name="Main.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/twitter/tweet_tokenizer/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="47" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="1365">
+            <state line="17" column="19" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0" vertical-offset="97" max-vertical-offset="1425">
               <folding>
                 <element signature="e#37#67#0" expanded="true" />
               </folding>
@@ -78,7 +78,7 @@
       <file leaf-file-name="thai_dict.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/thai_dict.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4984" column="4" selection-start="34165" selection-end="34167" vertical-scroll-proportion="-7.16" vertical-offset="74581" max-vertical-offset="395865">
+            <state line="1258" column="8" selection-start="9174" selection-end="9174" vertical-scroll-proportion="-5.36" vertical-offset="18736" max-vertical-offset="395865">
               <folding />
             </state>
           </provider>
@@ -99,16 +99,25 @@
       <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="65" selection-start="2590" selection-end="2590" vertical-scroll-proportion="-16.8" vertical-offset="0" max-vertical-offset="585">
+            <state line="5" column="30" selection-start="187" selection-end="187" vertical-scroll-proportion="-3.0" vertical-offset="0" max-vertical-offset="195">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="20140713_log.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/20140713_log.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="16" selection-start="3187" selection-end="3187" vertical-scroll-proportion="0.82857144" vertical-offset="360" max-vertical-offset="1020">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="9" selection-start="195" selection-end="195" vertical-scroll-proportion="0.25092936" vertical-offset="0" max-vertical-offset="538">
+            <state line="9" column="9" selection-start="195" selection-end="195" vertical-scroll-proportion="-5.4" vertical-offset="0" max-vertical-offset="240">
               <folding />
             </state>
           </provider>
@@ -117,7 +126,7 @@
       <file leaf-file-name="BreakDictionary.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/twitter/java/text/BreakDictionary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="252" column="60" selection-start="8621" selection-end="8621" vertical-scroll-proportion="0.0" vertical-offset="3547" max-vertical-offset="4935">
+            <state line="252" column="60" selection-start="8621" selection-end="8621" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4935">
               <folding>
                 <element signature="e#0#11512#0" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -161,15 +170,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BreakIterator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/src.zip!/java/text/BreakIterator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="425" column="23" selection-start="16308" selection-end="16315" vertical-scroll-proportion="-6.8846154" vertical-offset="5416" max-vertical-offset="9975">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -198,11 +198,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/twitter/java/text/BreakIterator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twitter/java/text/RuleBasedBreakIterator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twitter/sun/text/CompactByteArray.java" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/twitter/tweet_tokenizer/Main.scala" />
         <option value="$PROJECT_DIR$/src/main/java/com/twitter/java/text/BreakDictionary.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twitter/java/text/DictionaryBasedBreakIterator.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/twitter/tweet_tokenizer/Main.scala" />
+        <option value="$PROJECT_DIR$/20140713_log.md" />
       </list>
     </option>
   </component>
@@ -328,10 +329,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="twitter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="text" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -615,7 +612,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -789,36 +786,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/thai_dict.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4984" column="4" selection-start="34165" selection-end="34167" vertical-scroll-proportion="-7.16" vertical-offset="74581" max-vertical-offset="395865">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/twitter/java/text/OurBreakIterator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="31" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/twitter/tweet_tokenizer/Main.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="47" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.0" vertical-offset="307" max-vertical-offset="1365">
-          <folding>
-            <element signature="e#37#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twitter/java/text/BreakDictionary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="252" column="60" selection-start="8621" selection-end="8621" vertical-scroll-proportion="0.0" vertical-offset="3547" max-vertical-offset="4935">
-          <folding>
-            <element signature="e#0#11512#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -832,16 +803,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="65" selection-start="2590" selection-end="2590" vertical-scroll-proportion="-16.8" vertical-offset="0" max-vertical-offset="585">
+        <state line="9" column="9" selection-start="195" selection-end="195" vertical-scroll-proportion="-5.4" vertical-offset="0" max-vertical-offset="240">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="9" selection-start="195" selection-end="195" vertical-scroll-proportion="0.25092936" vertical-offset="0" max-vertical-offset="538">
+        <state line="5" column="30" selection-start="187" selection-end="187" vertical-scroll-proportion="-3.0" vertical-offset="0" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twitter/java/text/BreakDictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="252" column="60" selection-start="8621" selection-end="8621" vertical-scroll-proportion="0.0" vertical-offset="3547" max-vertical-offset="4935">
+          <folding>
+            <element signature="e#0#11512#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/thai_dict.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1258" column="8" selection-start="9174" selection-end="9174" vertical-scroll-proportion="-5.36" vertical-offset="18736" max-vertical-offset="395865">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/twitter/tweet_tokenizer/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="19" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0" vertical-offset="97" max-vertical-offset="1425">
+          <folding>
+            <element signature="e#37#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20140713_log.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="16" selection-start="3187" selection-end="3187" vertical-scroll-proportion="0.82857144" vertical-offset="360" max-vertical-offset="1020">
           <folding />
         </state>
       </provider>
