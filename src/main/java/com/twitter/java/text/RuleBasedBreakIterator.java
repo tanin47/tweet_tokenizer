@@ -46,10 +46,6 @@ import java.security.AccessController;
 import java.security.PrivilegedActionException;
 import java.security.PrivilegedExceptionAction;
 import java.text.BreakIterator;
-import java.util.Vector;
-import java.util.Stack;
-import java.util.Hashtable;
-import java.util.Enumeration;
 import java.util.MissingResourceException;
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
@@ -378,26 +374,26 @@ public class RuleBasedBreakIterator extends BreakIterator {
     byte[] buffer = readFile(datafile);
 
     /* Read header_info. */
-    int stateTableLength = getInt(buffer, 0);
-    int backwardsStateTableLength = getInt(buffer, 4);
-    int endStatesLength = getInt(buffer, 8);
-    int lookaheadStatesLength = getInt(buffer, 12);
-    int BMPdataLength = getInt(buffer, 16);
-    int nonBMPdataLength = getInt(buffer, 20);
-    int additionalDataLength = getInt(buffer, 24);
-    checksum = getLong(buffer, 28);
+    int stateTableLength = OurBreakIterator.getInt(buffer, 0);
+    int backwardsStateTableLength = OurBreakIterator.getInt(buffer, 4);
+    int endStatesLength = OurBreakIterator.getInt(buffer, 8);
+    int lookaheadStatesLength = OurBreakIterator.getInt(buffer, 12);
+    int BMPdataLength = OurBreakIterator.getInt(buffer, 16);
+    int nonBMPdataLength = OurBreakIterator.getInt(buffer, 20);
+    int additionalDataLength = OurBreakIterator.getInt(buffer, 24);
+    checksum = OurBreakIterator.getLong(buffer, 28);
 
     /* Read stateTable[numCategories * numRows] */
     stateTable = new short[stateTableLength];
     int offset = HEADER_LENGTH;
     for (int i = 0; i < stateTableLength; i++, offset+=2) {
-      stateTable[i] = getShort(buffer, offset);
+      stateTable[i] = OurBreakIterator.getShort(buffer, offset);
     }
 
     /* Read backwardsStateTable[numCategories * numRows] */
     backwardsStateTable = new short[backwardsStateTableLength];
     for (int i = 0; i < backwardsStateTableLength; i++, offset+=2) {
-      backwardsStateTable[i] = getShort(buffer, offset);
+      backwardsStateTable[i] = OurBreakIterator.getShort(buffer, offset);
     }
 
     /* Read endStates[numRows] */
@@ -415,7 +411,7 @@ public class RuleBasedBreakIterator extends BreakIterator {
     /* Read a category table and indices for BMP characters. */
     short[] temp1 = new short[BMP_INDICES_LENGTH]; // BMPindices
     for (int i = 0; i < BMP_INDICES_LENGTH; i++, offset+=2) {
-      temp1[i] = getShort(buffer, offset);
+      temp1[i] = OurBreakIterator.getShort(buffer, offset);
     }
     byte[] temp2 = new byte[BMPdataLength]; // BMPdata
     System.arraycopy(buffer, offset, temp2, 0, BMPdataLength);
@@ -425,7 +421,7 @@ public class RuleBasedBreakIterator extends BreakIterator {
     /* Read a category table for non-BMP characters. */
     int[] temp3 = new int[nonBMPdataLength];
     for (int i = 0; i < nonBMPdataLength; i++, offset+=4) {
-      temp3[i] = getInt(buffer, offset);
+      temp3[i] = OurBreakIterator.getInt(buffer, offset);
     }
     supplementaryCharCategoryTable = new SupplementaryCharacterData(temp3);
 
@@ -437,28 +433,6 @@ public class RuleBasedBreakIterator extends BreakIterator {
 
     /* Set numCategories */
     numCategories = stateTable.length / endStates.length;
-  }
-
-  static long getLong(byte[] buf, int offset) {
-    long num = buf[offset]&0xFF;
-    for (int i = 1; i < 8; i++) {
-      num = num<<8 | (buf[offset+i]&0xFF);
-    }
-    return num;
-  }
-
-  static int getInt(byte[] buf, int offset) {
-    int num = buf[offset]&0xFF;
-    for (int i = 1; i < 4; i++) {
-      num = num<<8 | (buf[offset+i]&0xFF);
-    }
-    return num;
-  }
-
-  static short getShort(byte[] buf, int offset) {
-    short num = (short)(buf[offset]&0xFF);
-    num = (short)(num<<8 | (buf[offset+1]&0xFF));
-    return num;
   }
 
   protected byte[] readFile(final String datafile)
@@ -503,7 +477,7 @@ public class RuleBasedBreakIterator extends BreakIterator {
     }
 
     /* Read data: totalDataSize + 8(for checksum) */
-    len = getInt(buf, ++offset);
+    len = OurBreakIterator.getInt(buf, ++offset);
     buf = new byte[len];
     if (is.read(buf) != len) {
       throw new MissingResourceException("Wrong data length",

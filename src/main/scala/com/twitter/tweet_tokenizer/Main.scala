@@ -1,7 +1,7 @@
 package com.twitter.tweet_tokenizer
 
 import java.text.BreakIterator
-import com.twitter.java.text.RuleBasedBreakIterator
+import com.twitter.java.text.{DictionaryBasedBreakIterator, RuleBasedBreakIterator}
 import scala.collection.mutable
 import java.util.Locale
 
@@ -16,8 +16,9 @@ object Main {
     )
 
     texts.foreach { text =>
-      println("JDK:      " + jdk(text).mkString("|"))
-      println("Improved: " + improved(text).mkString("|"))
+      println("JDK:                    " + jdk(text).mkString("|"))
+      println("JDK with our dict:      " + jdk(text).mkString("|"))
+      println("Improved:               " + improved(text).mkString("|"))
     }
   }
 
@@ -36,6 +37,26 @@ object Main {
 
       start = end
       end = jdkBoundary.next
+    }
+
+    buffer.toSeq
+  }
+
+  val jdkWithOurDict = new DictionaryBasedBreakIterator("WordBreakIteratorData_th", "thai_dict_trie")
+
+  def jdkWithOurDict(text: String): Seq[String] = {
+    jdkWithOurDict.setText(text)
+
+    var start = jdkWithOurDict.first
+    var end = jdkWithOurDict.next
+
+    val buffer = mutable.ListBuffer[String]()
+
+    while (end != BreakIterator.DONE) {
+      buffer.append(text.substring(start, end))
+
+      start = end
+      end = jdkWithOurDict.next
     }
 
     buffer.toSeq

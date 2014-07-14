@@ -1,6 +1,3 @@
-# From http://source.icu-project.org/repos/icu/icu/trunk/source/data/brkitr/thaidict.txt
-#  	Copyright (c) 2006-2014 International Business Machines Corporation,
-#  	Apple Inc., and others. All Rights Reserved.
 กก
 กกขนาก
 กกช้าง
